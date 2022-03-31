@@ -120,13 +120,14 @@ export class RecipientGateway {
     return true;
   }
 
-  async search(page: number, pageSize: number, term: string) {
+  async search(page: number, pageSize: number, term: string, referenceId: string) {
     // tslint:disable-next-line:max-line-length
     const endPoint = buildURL('recipients');
     const query = querystring.stringify({
       page,
       pageSize,
       search: term,
+      referenceId
     });
 
     const result = await this.gateway.client.get<types.Recipient.ListResponse>(`${endPoint}?${query}`);

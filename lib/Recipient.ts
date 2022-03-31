@@ -106,11 +106,13 @@ export class Recipient {
     page: number = 1,
     pageSize: number = 10,
     term: string = "",
+    referenceId: string = "",
   ) {
     return Configuration.gateway().recipient.search(
       page,
       pageSize,
       term,
+      referenceId,
     );
   }
 
