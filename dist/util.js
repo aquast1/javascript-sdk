@@ -7,6 +7,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
  * @hidden
  */
 function buildURL(base, ...parts) {
-    return ['', 'v1'].concat([base], parts).map(encodeURIComponent).join('/');
+    return ['', 'v1'].concat([base], parts.map(encodeURIComponent))
+        .join('/');
 }
 exports.buildURL = buildURL;

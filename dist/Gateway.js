@@ -6,7 +6,9 @@ const BatchGateway_1 = require("./BatchGateway");
 const PaymentGateway_1 = require("./PaymentGateway");
 const BalancesGateway_1 = require("./BalancesGateway");
 const OfflinePaymentGateway_1 = require("./OfflinePaymentGateway");
+const InvoiceGateway_1 = require("./InvoiceGateway");
 const Client_1 = require("./Client");
+const InvoiceLineGateway_1 = require("./InvoiceLineGateway");
 class Gateway {
     /**
      * This should be called by the connect() method to setup a client gateway
@@ -22,6 +24,8 @@ class Gateway {
         this.balances = new BalancesGateway_1.BalancesGateway(this);
         this.payment = new PaymentGateway_1.PaymentGateway(this);
         this.offlinePayment = new OfflinePaymentGateway_1.OfflinePaymentGateway(this);
+        this.invoice = new InvoiceGateway_1.InvoiceGateway(this);
+        this.invoiceLine = new InvoiceLineGateway_1.InvoiceLineGateway(this);
     }
 }
 exports.Gateway = Gateway;

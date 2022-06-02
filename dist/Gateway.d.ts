@@ -5,7 +5,9 @@ import { BatchGateway } from "./BatchGateway";
 import { PaymentGateway } from "./PaymentGateway";
 import { BalancesGateway } from "./BalancesGateway";
 import { OfflinePaymentGateway } from "./OfflinePaymentGateway";
+import { InvoiceGateway } from "./InvoiceGateway";
 import { Client } from "./Client";
+import { InvoiceLineGateway } from "./InvoiceLineGateway";
 export declare class Gateway {
     config: Configuration;
     client: Client;
@@ -15,6 +17,8 @@ export declare class Gateway {
     balances: BalancesGateway;
     payment: PaymentGateway;
     offlinePayment: OfflinePaymentGateway;
+    invoice: InvoiceGateway;
+    invoiceLine: InvoiceLineGateway;
     /**
      * This should be called by the connect() method to setup a client gateway
      * @param config Configuration parameters

@@ -503,3 +503,11 @@ export declare namespace BankInfo {
         lookupData: BankInfo;
     };
 }
+export interface ApiResponse<T> {
+    [key: string]: any;
+    ok: boolean;
+}
+export declare type Amount = {
+    value: number;
+    currency: string;
+};

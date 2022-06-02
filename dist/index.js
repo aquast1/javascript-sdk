@@ -17,6 +17,8 @@ var Payment_1 = require("./Payment");
 exports.Payment = Payment_1.Payment;
 var OfflinePayment_1 = require("./OfflinePayment");
 exports.OfflinePayment = OfflinePayment_1.OfflinePayment;
+var Invoice_1 = require("./Invoice");
+exports.Invoice = Invoice_1.Invoice;
 /**
  * Create a client for the Payment Rails JavasScript API
  * ```
